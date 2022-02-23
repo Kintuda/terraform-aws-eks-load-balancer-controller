@@ -71,6 +71,12 @@ variable "k8s_service_account_name" {
   description = "The k8s aws-loab-balancer-controller service account name"
 }
 
+variable "k8s_irsa_role_suffix_name" {
+  type        = string
+  default     = "aws-load-balancer-controller"
+  description = "IAM role suffix"
+}
+
 variable "settings" {
   type        = map(any)
   default     = {}

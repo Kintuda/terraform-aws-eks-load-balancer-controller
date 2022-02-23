@@ -213,7 +213,7 @@ data "aws_iam_policy_document" "lb_controller" {
 
 resource "aws_iam_policy" "lb_controller" {
   count       = local.k8s_irsa_role_create ? 1 : 0
-  name        = "${var.cluster_name}-aws-load-balancer-controller"
+  name        = "${var.cluster_name}-${var.k8s_irsa_role_suffix_name}"
   path        = "/"
   description = "Policy for aws-load-balancer-controller service"
 
@@ -246,7 +246,7 @@ data "aws_iam_policy_document" "lb_controller_assume" {
 
 resource "aws_iam_role" "lb_controller" {
   count              = local.k8s_irsa_role_create ? 1 : 0
-  name               = "${var.cluster_name}-aws-load-balancer-controller"
+  name               = "${var.cluster_name}-${var.k8s_irsa_role_suffix_name}"
   assume_role_policy = data.aws_iam_policy_document.lb_controller_assume[0].json
 }
 

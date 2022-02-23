@@ -88,6 +88,7 @@ No modules.
 | <a name="input_helm_release_name"></a> [helm\_release\_name](#input\_helm\_release\_name) | Helm release name | `string` | `"aws-load-balancer-controller"` | no |
 | <a name="input_helm_repo_url"></a> [helm\_repo\_url](#input\_helm\_repo\_url) | Helm repository | `string` | `"https://aws.github.io/eks-charts"` | no |
 | <a name="input_k8s_irsa_role_create"></a> [k8s\_irsa\_role\_create](#input\_k8s\_irsa\_role\_create) | Whether to create IRSA role and annotate service account | `bool` | `true` | no |
+| <a name="input_k8s_irsa_role_suffix_name"></a> [k8s\_irsa\_role\_suffix\_name](#input\_k8s\_irsa\_role\_suffix\_name) | IAM role suffix | `string` | `"aws-load-balancer-controller"` | no |
 | <a name="input_k8s_namespace"></a> [k8s\_namespace](#input\_k8s\_namespace) | The K8s namespace in which the node-problem-detector service account has been created | `string` | `"aws-lb-controller"` | no |
 | <a name="input_k8s_service_account_create"></a> [k8s\_service\_account\_create](#input\_k8s\_service\_account\_create) | Whether to create Service Account | `bool` | `true` | no |
 | <a name="input_k8s_service_account_name"></a> [k8s\_service\_account\_name](#input\_k8s\_service\_account\_name) | The k8s aws-loab-balancer-controller service account name | `string` | `"aws-load-balancer-controller"` | no |
