@@ -80,6 +80,6 @@ resource "kubernetes_manifest" "this" {
   }
 
   wait {
-    fields = var.argo_kubernetes_manifest_wait_for_fields
+    fields = var.argo_kubernetes_manifest_wait_fields
   }
 }
